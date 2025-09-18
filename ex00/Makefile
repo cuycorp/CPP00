@@ -1,16 +1,15 @@
 #Executable name
-NAME = cpp00
-
+NAME = megaphone
 
 #Compiler and flags 
 CC = g++
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 #Source files
 SRCS = megaphone.cpp 
 
 #Object file
-OBJS = $(SRCS:%.c=%.o)
+OBJS = $(SRCS:%.cpp=%.o)
 
 all: $(NAME)
 
@@ -18,18 +17,17 @@ $(NAME): $(OBJS)
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME) 
 
 #Compile individual object files
-%.o: %.c
+%.o: %.cpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 # Clean object files
 clean:
 	rm -f $(OBJS)
-	make -C  clean 
 
 # Clean everything
 fclean: clean
 	rm -f $(NAME)
-	make -C  fclean
+	make 
 
 # Rebuild everything
 re: fclean all

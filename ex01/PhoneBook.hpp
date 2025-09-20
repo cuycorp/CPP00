@@ -14,11 +14,13 @@ class PhoneBook
 	bool full;
 	PhoneBook(void);
 	~PhoneBook(void);
+	
 	void addContact(std::string firstName, std::string lastName,
 		std::string nickName, std::string phoneNumber,
 		std::string darkestSecret);
 	int getNumberOfContacts(void) const;
-	void printContactByID(int id);
+	void printContactByID(int id) const;
+	void printAllInfoContact(int id) const;
 };
 
 #endif

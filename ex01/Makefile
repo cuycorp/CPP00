@@ -7,7 +7,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 #Source files
 SRCS = Contact.cpp PhoneBook.cpp main.cpp \
-	   commandAdd.cpp commandSearch.cpp
+	   commandAdd.cpp commandSearch.cpp utils.cpp
 
 #Object file
 OBJS = $(SRCS:%.cpp=%.o)

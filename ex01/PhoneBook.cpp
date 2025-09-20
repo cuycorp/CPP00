@@ -39,10 +39,19 @@ int PhoneBook::getNumberOfContacts(void) const
 	return (limit);
 }
 
-void PhoneBook::printContactByID(int id)
+void PhoneBook::printContactByID(int id) const
 {
 	std::cout << std::setw(10) << id << "|";
 	std::cout << std::setw(10) << this->Contacts[id].getContactFirstNameTrunc() << "|";
 	std::cout << std::setw(10) << this->Contacts[id].getContactLastNameTrunc() << "|";
 	std::cout << std::setw(10) << this->Contacts[id].getContactNickNameTrunc() << std::endl;
+}
+
+void PhoneBook::printAllInfoContact(int id) const
+{
+	std::cout << "First name: " << this->Contacts[id].getContactFirstName() << std::endl;
+	std::cout << "Last name: " << this->Contacts[id].getContactLastName() << std::endl;
+	std::cout << "Nickname: " << this->Contacts[id].getContactNickName() << std::endl;
+	std::cout << "Phone number: " << this->Contacts[id].getContactPhoneNumber() << std::endl;
+	std::cout << "Darkest secret: " << this->Contacts[id].getContactDarkestSecret() << std::endl;
 }

@@ -1,10 +1,35 @@
 #include "main.hpp"
+#include <cstdlib>
 
-/*
-void	searchContact(PhoneBook *phonebook0, int index)
+int	getIdFromUser(PhoneBook *phonebook0)
 {
+	int	maxId;
+	int	id;
+
+	std::string inID;
+	maxId = phonebook0->getNumberOfContacts();
+	while (1)
+	{
+		std::cout << "Enter the index of the contact you want to see: ";
+		std::getline(std::cin, inID);
+		if (is_only_digits(inID))
+		{
+			id = atoi(inID.c_str());
+			if (id >= 0 && id < maxId)
+				break;
+		}
+		std::cout << "Enter valid index" << std::endl;
+	}
+	return (id);
 }
-*/
+
+void	searchContact(PhoneBook *phonebook0)
+{
+	int	id;
+
+	id = getIdFromUser(phonebook0);
+	phonebook0->printAllInfoContact(id);
+}
 
 void	displayPhonebook(PhoneBook *phonebook0)
 {
@@ -27,6 +52,5 @@ void	displayPhonebook(PhoneBook *phonebook0)
 void	commandSearch(PhoneBook *phonebook0)
 {
 	displayPhonebook(phonebook0);
-
-	std::cout << "Enter the index of the contact you want to see: ";
+	searchContact(phonebook0);
 }

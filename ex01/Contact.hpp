@@ -21,6 +21,9 @@ class Contact
 	std::string getContactFirstName(void) const;
 	std::string getContactLastName(void) const;
 	std::string getContactNickName(void) const;
+	std::string getContactPhoneNumber(void) const;
+	std::string getContactDarkestSecret(void) const;
+
 	std::string getContactFirstNameTrunc(void) const;
 	std::string getContactLastNameTrunc(void) const;
 	std::string getContactNickNameTrunc(void) const;

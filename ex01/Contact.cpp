@@ -38,6 +38,16 @@ std::string Contact::getContactNickName(void) const
 	return (this->nickname);
 }
 
+std::string Contact::getContactPhoneNumber(void) const
+{
+	return (this->phoneNumber);
+}
+
+std::string Contact::getContactDarkestSecret(void) const
+{
+	return (this->darkestSecret);
+}
+
 std::string Contact::getContactFirstNameTrunc(void) const
 {
 	std::string str;

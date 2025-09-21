@@ -3,23 +3,30 @@ NAME = awesomePhonebook
 
 #Compiler and flags 
 CC = g++
-FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-
+IFLAGS = -I include
+FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic ${IFLAGS}
 #Source files
-SRCS = Contact.cpp PhoneBook.cpp main.cpp \
-	   commandAdd.cpp commandSearch.cpp utils.cpp
+
+SRCS = src/Contact.cpp src/PhoneBook.cpp src/main.cpp \
+	   src/commandAdd.cpp src/commandSearch.cpp src/utils.cpp
 
 #Object file
-OBJS = $(SRCS:%.cpp=%.o)
+
+OBJS = $(SRCS:src/%.cpp=obj/%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) 
+
+obj:
+	mkdir -p obj 
+
+$(NAME): obj $(OBJS) 
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME) 
 
 #Compile individual object files
-%.o: %.cpp
+obj/%.o: src/%.cpp
 	$(CC) $(FLAGS) -c $< -o $@
+
 
 # Clean object files
 clean:

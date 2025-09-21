@@ -19,3 +19,9 @@ int	main(void)
 			std::cout << std::endl;
 	}
 }
+
+/*
+Todo: 
+> Debug searchContact
+> add object folder, src, and include 
+*/

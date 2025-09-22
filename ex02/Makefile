@@ -15,7 +15,6 @@ OBJS = $(SRCS:src/%.cpp=obj/%.o)
 
 all: $(NAME)
 
-
 obj:
 	mkdir -p obj 
 

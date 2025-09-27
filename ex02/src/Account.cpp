@@ -20,6 +20,7 @@ Account::Account(int initial_deposit)
 {
 	this->_accountIndex = _nbAccounts;
 	this->_amount = initial_deposit;
+	_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount << ";created" << std::endl;
 	Account::_nbAccounts += 1;
 	Account::_totalAmount += initial_deposit;

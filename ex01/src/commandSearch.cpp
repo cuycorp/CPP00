@@ -1,3 +1,4 @@
+#include "PhoneBook.hpp"
 #include "main.hpp"
 #include <cstdlib>
 
@@ -43,7 +44,7 @@ void	displayPhonebook(PhoneBook *phonebook0)
 
 	i = 0;
 	limit = phonebook0->getNumberOfContacts();
-	std::cout<< "displayPhonebook subfunction of commandSearch, variable limit:" << limit << std::endl;
+	std::cout << "displayPhonebook subfunction of commandSearch, variable limit:" << limit << std::endl;
 	std::cout << "-------------------------------------------" << std::endl;
 	std::cout << "     Index|First Name| Last Name|  Nickname" << std::endl;
 	std::cout << "-------------------------------------------" << std::endl;

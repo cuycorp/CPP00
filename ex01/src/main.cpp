@@ -1,4 +1,5 @@
 #include "main.hpp"
+#include "PhoneBook.hpp"
 
 int	main(void)
 {
@@ -18,6 +19,7 @@ int	main(void)
 		else
 			std::cout << std::endl;
 	}
+	return (1);
 }
 
 /*

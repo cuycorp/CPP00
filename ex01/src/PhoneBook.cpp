@@ -17,15 +17,20 @@ PhoneBook::~PhoneBook(void)
 void PhoneBook::addContact(std::string firstName, std::string lastName,
 	std::string nickName, std::string phoneNumber, std::string darkestSecret)
 {
-	this->Contacts[this->id_Contact].fillContact(firstName, lastName, nickName,
-		phoneNumber, darkestSecret);
-	if (this->id_Contact == 7)
+	if (this->id_Contact == 2) // change to 7
 	{
+		this->Contacts[0].fillContact(firstName, lastName, nickName,
+			phoneNumber, darkestSecret);
 		this->full = true;
-		this->id_Contact = 0;
+		this->id_Contact = 1;
 	}
 	else
+	{
+		this->Contacts[this->id_Contact].fillContact(firstName, lastName,
+			nickName, phoneNumber, darkestSecret);
 		this->id_Contact++;
+	}
+	std::cout << "Inside PhoneBook::addContact attribute this->id_Contact" << this->id_Contact << std::endl;
 }
 
 int PhoneBook::getNumberOfContacts(void) const
@@ -33,7 +38,7 @@ int PhoneBook::getNumberOfContacts(void) const
 	int limit;
 
 	if (this->full == true)
-		limit = 8;
+		limit = 2; // change to 7
 	else
 		limit = this->id_Contact;
 	return (limit);

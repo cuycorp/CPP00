@@ -7,7 +7,7 @@
 class PhoneBook
 {
   private:
-	Contact Contacts[8];
+	Contact Contacts[8]; //change to 7 
 
   public:
 	int id_Contact;

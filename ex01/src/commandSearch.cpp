@@ -16,7 +16,7 @@ int	getIdFromUser(PhoneBook *phonebook0)
 		{
 			id = atoi(inID.c_str());
 			if (id >= 0 && id < maxId)
-				break;
+				break ;
 		}
 		std::cout << "Enter valid index" << std::endl;
 	}
@@ -27,6 +27,11 @@ void	searchContact(PhoneBook *phonebook0)
 {
 	int	id;
 
+	if (phonebook0->getNumberOfContacts() == 0)
+	{
+		std::cout << "Add a contact first" << std::endl;
+		return ;
+	}
 	id = getIdFromUser(phonebook0);
 	phonebook0->printAllInfoContact(id);
 }
@@ -38,6 +43,7 @@ void	displayPhonebook(PhoneBook *phonebook0)
 
 	i = 0;
 	limit = phonebook0->getNumberOfContacts();
+	std::cout<< "displayPhonebook subfunction of commandSearch, variable limit:" << limit << std::endl;
 	std::cout << "-------------------------------------------" << std::endl;
 	std::cout << "     Index|First Name| Last Name|  Nickname" << std::endl;
 	std::cout << "-------------------------------------------" << std::endl;

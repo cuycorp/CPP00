@@ -22,6 +22,7 @@ int	main(void)
 
 /*
 Todo: 
-> Debug searchContact
-> add object folder, src, and include 
+1. check modify oldest contact
+2. handle invalid SEARCH, no contact added before
+3. Segmentation fault when changing details of contact -> done
 */

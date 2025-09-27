@@ -18,7 +18,7 @@ PhoneBook::~PhoneBook(void)
 void PhoneBook::addContact(std::string firstName, std::string lastName,
 	std::string nickName, std::string phoneNumber, std::string darkestSecret)
 {
-	if (this->id_Contact == NUM_CONTACTS - 1)
+	if (this->id_Contact == NUM_CONTACTS)
 	{
 		this->Contacts[0].fillContact(firstName, lastName, nickName,
 			phoneNumber, darkestSecret);
@@ -39,7 +39,7 @@ int PhoneBook::getNumberOfContacts(void) const
 	int limit;
 
 	if (this->full == true)
-		limit = NUM_CONTACTS - 1;
+		limit = NUM_CONTACTS;
 	else
 		limit = this->id_Contact;
 	return (limit);

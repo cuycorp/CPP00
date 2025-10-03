@@ -27,7 +27,7 @@ clean:
 # Clean everything
 fclean: clean
 	rm -f $(NAME)
-	make 
+#	make 
 
 # Rebuild everything
 re: fclean all

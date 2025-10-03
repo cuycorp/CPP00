@@ -31,7 +31,6 @@ void PhoneBook::addContact(std::string firstName, std::string lastName,
 			nickName, phoneNumber, darkestSecret);
 		this->id_Contact++;
 	}
-	std::cout << "Inside PhoneBook::addContact attribute this->id_Contact" << this->id_Contact << std::endl;
 }
 
 int PhoneBook::getNumberOfContacts(void) const

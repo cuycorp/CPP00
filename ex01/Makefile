@@ -35,7 +35,6 @@ clean:
 # Clean everything
 fclean: clean
 	rm -f $(NAME)
-	make 
 
 # Rebuild everything
 re: fclean all

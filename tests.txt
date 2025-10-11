@@ -1,0 +1,3 @@
+check pendatic and subject requirements for norm and compilation
+uodate files for makefile
+https://github.com/cuycorp/CPP00.git

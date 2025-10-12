@@ -2,7 +2,7 @@
 NAME = awesomePhonebook
 
 #Compiler and flags 
-CC = g++
+CC = c++
 IFLAGS = -I include
 FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic ${IFLAGS}
 #Source files

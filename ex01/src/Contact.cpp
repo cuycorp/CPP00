@@ -77,3 +77,4 @@ std::string Contact::getContactNickNameTrunc(void) const
 		return (str.substr(0, 9) + ".");
 	return (str);
 }
+

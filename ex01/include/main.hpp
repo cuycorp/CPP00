@@ -13,3 +13,4 @@ void	commandAdd(PhoneBook *phonebook0);
 void	commandSearch(PhoneBook *phonebook0);
 bool	is_only_digits(std::string inID);
 #endif
+

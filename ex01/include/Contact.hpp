@@ -29,3 +29,4 @@ class Contact
 	std::string getContactNickNameTrunc(void) const;
 };
 #endif
+
